@@ -9,14 +9,14 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function () {
-  gulp.src('./*')
+  gulp.src('./**/*.html')
     .pipe(connect.reload());
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./*.html'], ['html']);
-  gulp.watch(['./js/*.js'], ['html']);
-  gulp.watch(['./css/*.css'], ['html']);
+  gulp.watch(['./**/*.html'], ['html']);
+  gulp.watch(['./**/*.js'], ['html']);
+  gulp.watch(['./**/*.css'], ['html']);
 });
 
 gulp.task('default', ['connect', 'watch']);
